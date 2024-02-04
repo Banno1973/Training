@@ -1,0 +1,15 @@
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\bin\Debug\net8.0\TestingRandomStuff.exe
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\bin\Debug\net8.0\TestingRandomStuff.deps.json
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\bin\Debug\net8.0\TestingRandomStuff.runtimeconfig.json
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\bin\Debug\net8.0\TestingRandomStuff.dll
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\bin\Debug\net8.0\TestingRandomStuff.pdb
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.AssemblyInfoInputs.cache
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.AssemblyInfo.cs
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.csproj.CoreCompileInputs.cache
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.sourcelink.json
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.dll
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\refint\TestingRandomStuff.dll
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.pdb
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\TestingRandomStuff.genruntimeconfig.cache
+C:\Users\perni\source\repos\Training\TestingRandomStuff\TestingRandomStuff\obj\Debug\net8.0\ref\TestingRandomStuff.dll
