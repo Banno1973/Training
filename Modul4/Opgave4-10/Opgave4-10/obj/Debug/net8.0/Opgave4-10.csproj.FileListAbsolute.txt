@@ -1,0 +1,15 @@
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\bin\Debug\net8.0\Opgave4-10.exe
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\bin\Debug\net8.0\Opgave4-10.deps.json
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\bin\Debug\net8.0\Opgave4-10.runtimeconfig.json
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\bin\Debug\net8.0\Opgave4-10.dll
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\bin\Debug\net8.0\Opgave4-10.pdb
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.AssemblyInfoInputs.cache
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.AssemblyInfo.cs
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.csproj.CoreCompileInputs.cache
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.sourcelink.json
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.dll
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\refint\Opgave4-10.dll
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.pdb
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\Opgave4-10.genruntimeconfig.cache
+C:\Users\perni\source\repos\Training\Modul4\Opgave4-10\Opgave4-10\obj\Debug\net8.0\ref\Opgave4-10.dll

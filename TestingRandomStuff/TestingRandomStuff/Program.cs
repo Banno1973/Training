@@ -1,11 +1,22 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hvad hedder du?");
-string navn = Console.ReadLine();
+﻿// Dette program skal fortælle hvad en gruppe med et bestemt antal
+// medlemmer hedder.
+// Programmet er korrekt, når det udskriver den korrekte beskrivelse,
+// uanset om du indtaster 1, 2 eller 3.
 
-Console.WriteLine("Hvor gammel er du?");
-int alder = Convert.ToInt32(Console.ReadLine());
+using System;
 
-string nyAlder = (alder + 1).ToString();
+Console.WriteLine("Hvor mange er I i gruppen? (1-3 personer)");
+int antal = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine($"Hej {navn}");
-Console.WriteLine($"Til næste år bliver du {nyAlder} år");
+if (antal == 1)
+{
+    Console.WriteLine("Du er solist");
+}
+else if (antal == 2)
+{
+    Console.WriteLine("I er en duo");
+}
+else if (antal == 3) 
+{
+    Console.WriteLine("I er en trio");
+}
