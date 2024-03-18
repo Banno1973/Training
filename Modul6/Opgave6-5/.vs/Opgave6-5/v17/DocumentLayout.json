@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\perni\\source\\repos\\Training\\Modul6\\Opgave6-5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{240CCFD5-3646-41FC-9692-AB52333D2479}|Opgave6-5\\Opgave6-5.csproj|c:\\users\\perni\\source\\repos\\training\\modul6\\opgave6-5\\opgave6-5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{240CCFD5-3646-41FC-9692-AB52333D2479}|Opgave6-5\\Opgave6-5.csproj|solutionrelative:opgave6-5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\perni\\source\\repos\\Training\\Modul6\\Opgave6-5\\Opgave6-5\\Program.cs",
+              "RelativeDocumentMoniker": "Opgave6-5\\Program.cs",
+              "ToolTip": "C:\\Users\\perni\\source\\repos\\Training\\Modul6\\Opgave6-5\\Opgave6-5\\Program.cs",
+              "RelativeToolTip": "Opgave6-5\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T12:52:00.191Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
