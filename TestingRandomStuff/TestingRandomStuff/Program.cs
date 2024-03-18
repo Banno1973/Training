@@ -1,22 +1,19 @@
-﻿// Dette program skal fortælle hvad en gruppe med et bestemt antal
-// medlemmer hedder.
-// Programmet er korrekt, når det udskriver den korrekte beskrivelse,
-// uanset om du indtaster 1, 2 eller 3.
+﻿// Programmet skal bede brugeren indtaste hvor mange tal, han vil have
+// i sit array. Derefter fyldes arrayet med tal fra 0 og op, indtil det
+// ønskede antal er opnået.
 
-using System;
+// Herefter skal programmet udskrive tallene i arrayet i baglæns rækkefølge
 
-Console.WriteLine("Hvor mange er I i gruppen? (1-3 personer)");
+Console.WriteLine("Hvor mange tal vil du have?");
 int antal = Convert.ToInt32(Console.ReadLine());
 
-if (antal == 1)
+int[] tal = new int[antal];
+for (int i = 0; i < tal.Length; i++)
 {
-    Console.WriteLine("Du er solist");
+    tal[i] = i;
 }
-else if (antal == 2)
+
+for (int i = tal.Length - 1; i > 0; i--)
 {
-    Console.WriteLine("I er en duo");
-}
-else if (antal == 3) 
-{
-    Console.WriteLine("I er en trio");
+    Console.WriteLine(tal[i].ToString());
 }
