@@ -1,6 +1,6 @@
 ﻿// Opret en liste af drikkevarer
-List<Drikkevare> drikkevarer = new List<Drikkevare>
-            {
+List<Drikkevare> drikkevarer =
+            [
                 // Tilføj drikkevarer til listen
                 new Drikkevare("Almindelig kaffe", 6.00, true, true, false),
                 new Drikkevare("Latte Macchiato", 9.00, true, false, false),
@@ -9,7 +9,7 @@ List<Drikkevare> drikkevarer = new List<Drikkevare>
                 new Drikkevare("The", 5.00, true, true, false),
                 new Drikkevare("Cacao", 7.00, false, false, true),
                 new Drikkevare("Suppe", 7.00, false, false, false)
-            };
+            ];
 
 // Menu
 Console.WriteLine("Velkommen til Kaffeautomaten!");
@@ -41,44 +41,40 @@ if (valgtIndex > 0 && valgtIndex <= drikkevarer.Count)
     // Liste til at gemme valgte tillæg
     List<string> valgteTillæg = [];
 
-    // Loop gennem tillæg
-    while (true)
+    // "Loop" gennem mulige tillæg
+    // Note: Jeg fik faktisk startet med at rode mig selv ind i en while(true) løkke her,
+    // før det gik op for mig, at det blot er simple iterative valg og så slut :)
+    if (valgtDrikkevare.SukkerTilladt)
     {
-        if (valgtDrikkevare.SukkerTilladt)
+        Console.WriteLine("1. Sukker (+1,00 kr)");
+        Console.Write("Vil du tilføje sukker? (J/N): ");
+        string svar = Console.ReadLine().ToUpper();
+        if (svar == "J")
         {
-            Console.WriteLine("1. Sukker (+1,00 kr)");
-            Console.Write("Vil du tilføje sukker? (J/N): ");
-            string svar = Console.ReadLine().ToUpper();
-            if (svar == "J")
-            {
-                valgteTillæg.Add("Sukker");
-            }
+            valgteTillæg.Add("Sukker");
         }
+    }
 
-        if (valgtDrikkevare.FlødeTilladt)
+    if (valgtDrikkevare.FlødeTilladt)
+    {
+        Console.WriteLine("2. Fløde (+1,00 kr)");
+        Console.Write("Vil du tilføje fløde? (J/N): ");
+        string svar = Console.ReadLine().ToUpper();
+        if (svar == "J")
         {
-            Console.WriteLine("2. Fløde (+1,00 kr)");
-            Console.Write("Vil du tilføje fløde? (J/N): ");
-            string svar = Console.ReadLine().ToUpper();
-            if (svar == "J")
-            {
-                valgteTillæg.Add("Fløde");
-            }
+            valgteTillæg.Add("Fløde");
         }
+    }
 
-        if (valgtDrikkevare.FlødeskumTilladt)
+    if (valgtDrikkevare.FlødeskumTilladt)
+    {
+        Console.WriteLine("3. Flødeskum (+1,00 kr)");
+        Console.Write("Vil du tilføje flødeskum? (J/N): ");
+        string svar = Console.ReadLine().ToUpper();
+        if (svar == "J")
         {
-            Console.WriteLine("3. Flødeskum (+1,00 kr)");
-            Console.Write("Vil du tilføje flødeskum? (J/N): ");
-            string svar = Console.ReadLine().ToUpper();
-            if (svar == "J")
-            {
-                valgteTillæg.Add("Flødeskum");
-            }
+            valgteTillæg.Add("Flødeskum");
         }
-
-        // Hop ud af loop - den kører lidt for længe ellers viser det sig :D 
-        break;
     }
 
     // Beregn den samlede pris
