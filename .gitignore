@@ -79,6 +79,7 @@ _ReSharper*/
 *.pidb
 *.svclog
 *.scc
+*.vsix
 
 # Folders
 [Tt]est[Rr]esult*/
