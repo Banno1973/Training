@@ -1,0 +1,63 @@
+﻿[
+  {
+    "Name": "Soldier",
+    "Description": "You spent time in the military and have some combat experience.",
+    "AttackBonus": 1,
+    "DefenseBonus": 1,
+    "LifeBonus": 0,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Wrestler",
+    "Description": "You are fit from competing in wrestling matches and can read your opponent well.",
+    "AttackBonus": 0,
+    "DefenseBonus": 1,
+    "LifeBonus": 1,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Bouncer",
+    "Description": "Keeping the peace at night in the taverns keeps you healthy and you fight well.",
+    "AttackBonus": 1,
+    "DefenseBonus": 0,
+    "LifeBonus": 1,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Thug",
+    "Description": "Attack is the best defense. That is the law in the slums and you live by them.",
+    "AttackBonus": 2,
+    "DefenseBonus": 0,
+    "LifeBonus": 0,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Thief",
+    "Description": "Avoid trouble and keep yourself hidden. You are very fast and agile.",
+    "AttackBonus": 0,
+    "DefenseBonus": 2,
+    "LifeBonus": 0,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Athlete",
+    "Description": "You participated in the Greek olympics. You are at peak physical health.",
+    "AttackBonus": 0,
+    "DefenseBonus": 0,
+    "LifeBonus": 2,
+    "FavorMultiplier": 1.0
+  },
+  {
+    "Name": "Scholar",
+    "Description": "You are old and frail after a lifetime of study. But the crowds will love you!",
+    "AttackBonus": -2,
+    "DefenseBonus": -2,
+    "LifeBonus": -2,
+    "FavorMultiplier": 2.0
+  }
+
+
+
+
+
+]

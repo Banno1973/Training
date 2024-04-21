@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Gladiator.Application;
+
+GameManager game = new();
+game.Run();
+
+
+
+
