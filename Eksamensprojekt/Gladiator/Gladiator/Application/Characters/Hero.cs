@@ -3,10 +3,8 @@
     public class Hero : Character
 
     {
-        private string name = "Anonymous"; // default assignment to avoid null values
         private double favorMultiplier = 0;
-
-        public string Name { get => name; set => name = value; }
+        public string Name { get; set; }
         public double FavorMultiplier { get => favorMultiplier; set => favorMultiplier = value; }
         public Background Background { get; set; }
 
@@ -14,7 +12,11 @@
         {
             if (!string.IsNullOrWhiteSpace(name))
             {
-                this.name = name;
+                Name = name;
+            }
+            else
+            {
+                Name = "Unknown";
             }
 
             FavorMultiplier = background.FavorMultiplier;

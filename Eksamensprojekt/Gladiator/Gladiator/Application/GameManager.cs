@@ -7,8 +7,10 @@ namespace Gladiator.Application
     {
         private GameState currentState;
         private ScreenManager screenManager;
+        private CombatManager combatManager;
         private string playerName;
         private Hero hero;
+        private Opponent opponent;
 
         public GameManager()
         {
@@ -42,11 +44,15 @@ namespace Gladiator.Application
                 case GameState.FirstRound:
                     FirstRoundScreen.Render();
                     break;
+                case GameState.NewBattle:
+                    break;
                 case GameState.Battle:
                     BattleScreen battleScreen = new(); // pass by value or reference...?
-                    battleScreen.Render(hero);
+                    battleScreen.Render(hero, opponent);
                     break;
-                    // Add cases for other game states
+                case GameState.GameOver:
+                    GameOverScreen.Render();
+                    break;
             }
         }
 
@@ -70,27 +76,17 @@ namespace Gladiator.Application
                     hero.DisplayStats();
                     break;
                 case GameState.FirstRound:
+                    opponent = new Opponent($"Opponent #{GameProgressTracker.MatchNumber}");
+                    combatManager = new CombatManager(hero, opponent);
                     break;
                 case GameState.Battle:
                     // Handle battle input
-                    //HandleBattleInput(userInput);
+                    combatManager.ResolveCombatRound(userInput);
+                    Console.ReadLine();
                     break;
                     // Add cases for other game states
             }
         }
-
-        //private void HandleBattleInput(string userInput)
-        //{
-        //    // Parse user input and execute corresponding command
-        //    switch (userInput.ToLower())
-        //    {
-        //        case "attack":
-        //            ICommand attackCommand = new AttackCommand();
-        //            attackCommand.Execute();
-        //            break;
-        //            // Add cases for other player actions
-        //    }
-        //}
 
         private void UpdateGameState()
         {
@@ -107,8 +103,10 @@ namespace Gladiator.Application
                     currentState = GameState.Battle;
                     break;
                 case GameState.Battle:
-                    // Handle battle input
-                    //HandleBattleInput(userInput);
+                    if (!hero.IsAlive)
+                    {
+                        currentState = GameState.GameOver;
+                    }
                     break;
                     // Add cases for other game states
             }

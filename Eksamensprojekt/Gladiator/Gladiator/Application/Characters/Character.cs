@@ -8,15 +8,29 @@ namespace Gladiator.Application.Characters
 {
     public class Character
     {
-        private int attackPower;
-        private int defenseRating;
-        private int maxLifePoints;
-        private int currentLifePoints;
+        private string _name;
+        private int _attackPower;
+        private int _defenseRating;
+        private int _maxLifePoints;
+        private int _currentLifePoints;
+        private bool _isAlive;
 
-        public int AttackPower { get => attackPower; set => attackPower = value; }
-        public int DefenseRating { get => defenseRating; set => defenseRating = value; }
-        public int MaxLifePoints { get => maxLifePoints; set => maxLifePoints = value; }
-        public int CurrentLifePoints { get => currentLifePoints; set => currentLifePoints = value; }
+        public string Name { get => _name; set => _name = value; }
+        public int AttackPower { get => _attackPower; set => _attackPower = value; }
+        public int DefenseRating { get => _defenseRating; set => _defenseRating = value; }
+        public int MaxLifePoints { get => _maxLifePoints; set => _maxLifePoints = value; }
+        public int CurrentLifePoints { get => _currentLifePoints; set => _currentLifePoints = value; }
+        public bool IsAlive { get => _isAlive; set => _isAlive = value; }
+
+        public Character(string name)
+        {
+            Name = name;
+            AttackPower = 0;
+            DefenseRating = 10;
+            MaxLifePoints = 10;
+            CurrentLifePoints = MaxLifePoints;
+            IsAlive = true;
+        }
 
         public Character()
         {
@@ -24,14 +38,16 @@ namespace Gladiator.Application.Characters
             DefenseRating = 10;
             MaxLifePoints = 10;
             CurrentLifePoints = MaxLifePoints;
+            IsAlive = true;
         }
 
-        public Character(int attackPower, int defenseRating, int maxLifePoints)
+        public Character(int attackPower, int defenseRating, int maxLifePoints, bool isAlive)
         {
-            this.attackPower = attackPower;
-            this.defenseRating = defenseRating;
-            this.maxLifePoints = maxLifePoints;
-            this.currentLifePoints = maxLifePoints;
+            _attackPower = attackPower;
+            _defenseRating = defenseRating;
+            _maxLifePoints = maxLifePoints;
+            _currentLifePoints = maxLifePoints;
+            _isAlive = isAlive;
         }
 
         public void DisplayStats()
@@ -40,6 +56,18 @@ namespace Gladiator.Application.Characters
             Console.WriteLine($"Defense Rating: {DefenseRating}");
             Console.WriteLine($"Max life: {MaxLifePoints}");
             Console.WriteLine($"Current life: {MaxLifePoints}");
+        }
+
+        public void ReduceLifePoints(int damage)
+        {
+            // Reduce current life with damage number
+            _currentLifePoints -= damage;
+            
+            // Character dies, if damage reduces character's life points to 0 or less
+            if (_currentLifePoints <= 0)
+            {
+                IsAlive = false;
+            }        
         }
     }
 }

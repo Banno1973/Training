@@ -5,6 +5,7 @@
         Welcome,
         HeroCreation,
         FirstRound,
+        NewBattle,
         Battle,
         GameOver
     }
