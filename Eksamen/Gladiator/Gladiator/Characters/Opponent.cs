@@ -4,26 +4,25 @@
 
     public class Opponent : Character
     {
-        public Opponent(string name, int attack, int defense, int maxLifePoints)
-            : base(name, attack, defense, maxLifePoints) { }
+        public Opponent(string name, int attack, int defense, int maxLifePoints, Dice damageDice)
+            : base(name, attack, defense, maxLifePoints, damageDice) { }
 
         public override void PerformAttack(Character opponent)
         {
-            int diceRoll = attackDice.Roll();
-            int totalAttackRoll = diceRoll + Attack;
+            int attackRoll = attackDice.Roll();
+            int totalAttackRoll = attackRoll + Attack;
 
-            Console.WriteLine($"{Name} rolls a {diceRoll} on a 1d20 + {Attack} for a total of {totalAttackRoll}!");
+            Console.WriteLine($"{Name} rolls a {attackRoll} on a 1d20 + {Attack} for a total of {totalAttackRoll}!\n");
 
             if (totalAttackRoll >= opponent.Defense)
             {
-                Random rng = new Random();
-                int damage = rng.Next(1, 6);  // Simulating damage roll (1d6 for Opponent)
+                int damage = DamageDice.Roll();
                 opponent.TakeDamage(damage);
-                Console.WriteLine($"{Name} attacks {opponent.Name} for {damage} damage. They reduced your life to {opponent.LifePoints}!");
+                Console.WriteLine($"{Name} attacks {opponent.Name} and rolls 1d{DamageDice.GetDieSides()} for {damage} damage. They reduced your life to {opponent.LifePoints}!\n");
             }
             else
             {
-                Console.WriteLine($"{Name} attacks {opponent.Name} but misses.");
+                Console.WriteLine($"{Name} attacks {opponent.Name} but misses.\n");
             }
         }
     }

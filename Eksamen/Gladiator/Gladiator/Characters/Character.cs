@@ -8,6 +8,7 @@
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int MaxLifePoints { get; private set; }
+        public Dice DamageDice { get; set; }
 
         private int _currentLifePoints;
 
@@ -20,13 +21,14 @@
         // Shared d20 for all attack rolls, protected so derived classes can access it
         protected static Dice attackDice = new(20);
 
-        public Character(string name, int attack, int defense, int maxLifePoints)
+        public Character(string name, int attack, int defense, int maxLifePoints, Dice damageDice)
         {
             Name = name;
             Attack = attack;
             Defense = defense;
             MaxLifePoints = maxLifePoints;
             _currentLifePoints = maxLifePoints;
+            DamageDice = damageDice;
         }
 
         public bool IsAlive()

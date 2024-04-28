@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gladiator
+﻿namespace Gladiator
 {
     public class Dice
     {
@@ -11,6 +9,11 @@ namespace Gladiator
         {
             _sides = sides;
             _random = new Random();
+        }
+
+        public int GetDieSides()
+        {
+            return _sides;
         }
 
         // Roll a single die numberOfDice times and sum the results
@@ -24,5 +27,4 @@ namespace Gladiator
             return total;
         }
     }
-
 }

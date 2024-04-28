@@ -1,18 +1,21 @@
-﻿using Gladiator.Characters;
+﻿using Gladiator;
+using Gladiator.Characters;
 
 public class Game
 {
     private Hero _hero;
     private Opponent _currentOpponent;
     private int _currentMatch = 0;
-    private const int TotalMatches = 5;  // Total number of matches including the champion
+    private const int TotalMatches = 5;  // Total number of matches
 
     public Game()
     {
         Console.WriteLine("Welcome to the Gladiator Arena!");
+        Console.WriteLine("Can you survive 5 rounds in the arena, or will you perish like so many before?\n");
         Console.Write("Enter the name of your hero: ");
+
         string heroName = Console.ReadLine();
-        _hero = new Hero(heroName, 3, 10, 15);  // Initialize hero with initial stats
+        _hero = new Hero(heroName, 3, 10, 15, new Dice(6));  // Initialize hero with initial stats
     }
 
     public void Start()
@@ -20,7 +23,7 @@ public class Game
         for (int i = 0; i < TotalMatches; i++)
         {
             Console.Clear(); // Clear the console for a new match screen
-            Console.WriteLine($"Match {i + 1}");
+            Console.WriteLine($"Get ready for Match {i + 1}.");
             SetupOpponent(i);
 
             Console.WriteLine("Press any key to start the match...");
@@ -35,24 +38,28 @@ public class Game
 
             if (i < TotalMatches - 1) // Check if there are more matches left
             {
-                Console.WriteLine("You won the match! Press any key to proceed to the next match...");
+                Console.WriteLine("You won the match! You regain your life while preparing for the next match.");
+                Console.WriteLine("Press any key to proceed to the next match...");
                 Console.ReadKey();
             }
-
             _hero.ResetLifePoints();  // Reset hero's life points after each match
         }
 
-        Console.WriteLine("Congratulations! You've defeated all opponents, including the champion!");
+        Console.WriteLine("Congratulations! You've defeated all opponents and are now the Arena Champion!");
         Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
     }
 
     private void SetupOpponent(int matchNumber)
     {
+        Random random = new();
+        int opponentNameIndex = random.Next(0, 19);
+        OpponentNames name = (OpponentNames)opponentNameIndex;
+
         int life = 6 + matchNumber * 2;  // Incremental increase in life
         int attack = 1 + matchNumber;    // Incremental increase in attack
         int defense = 7 + matchNumber;   // Incremental increase in defense
-        _currentOpponent = new Opponent($"Opponent {matchNumber + 1}", attack, defense, life);
+        _currentOpponent = new Opponent(name.ToString(), attack, defense, life, new Dice(6));
     }
 
     private void DisplayMatchStats()
@@ -68,14 +75,16 @@ public class Game
     {
         Console.WriteLine($"Match {_currentMatch + 1}: Your opponent is {_currentOpponent.Name} with {_currentOpponent.LifePoints} life points.");
 
-        // Simulate hero and opponent take turns attacking in a match
+        // Simulate that hero and opponent take turns attacking in a match
         while (_hero.IsAlive() && _currentOpponent.IsAlive())
         {
             Console.Clear(); // Clear console between each combat round
             DisplayMatchStats(); // Display tabulated stats for the hero and opponent
+
+            // Display combat actions
             Console.WriteLine("\nAvailable Actions:");
             Console.WriteLine("1. Attack");
-            Console.WriteLine("2. Defend. Do nothing, by regain 1d4 life.");
+            Console.WriteLine("2. Defend. Do nothing but regain 1d4 life.");
             Console.WriteLine("Choose an action (enter the number): ");
 
             string input = Console.ReadLine();
@@ -107,7 +116,7 @@ public class Game
 
         if (_hero.IsAlive())
         {
-            Console.WriteLine($"You won Match {_currentMatch + 1}!");
+            Console.WriteLine($"You defeated {_currentOpponent.Name} in Match {_currentMatch + 1}!");
             _currentMatch++;
             return true;  // Hero survives, proceed to next match
         }
