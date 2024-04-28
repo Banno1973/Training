@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|c:\\users\\perni\\source\\repos\\training\\eksamen\\gladiator\\gladiator\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|solutionrelative:gladiator\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|c:\\users\\perni\\source\\repos\\training\\eksamen\\gladiator\\gladiator\\characters\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|solutionrelative:gladiator\\characters\\hero.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|c:\\users\\perni\\source\\repos\\training\\eksamen\\gladiator\\gladiator\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|solutionrelative:gladiator\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|c:\\users\\perni\\source\\repos\\training\\eksamen\\gladiator\\gladiator\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|solutionrelative:gladiator\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5C2CAE7-9605-4EF8-9AAC-A9AE360353CD}|Gladiator\\Gladiator.csproj|c:\\users\\perni\\source\\repos\\training\\eksamen\\gladiator\\gladiator\\characters\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dice.cs",
               "DocumentMoniker": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Dice.cs",
               "RelativeDocumentMoniker": "Gladiator\\Dice.cs",
@@ -68,25 +68,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Game.cs",
               "RelativeDocumentMoniker": "Gladiator\\Game.cs",
               "ToolTip": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Game.cs",
               "RelativeToolTip": "Gladiator\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIAwwBEAAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T10:02:10.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Opponent.cs",
               "DocumentMoniker": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Characters\\Opponent.cs",
               "RelativeDocumentMoniker": "Gladiator\\Characters\\Opponent.cs",
-              "ToolTip": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Characters\\Opponent.cs*",
-              "RelativeToolTip": "Gladiator\\Characters\\Opponent.cs*",
+              "ToolTip": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Characters\\Opponent.cs",
+              "RelativeToolTip": "Gladiator\\Characters\\Opponent.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T09:58:37.456Z",
@@ -94,13 +94,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Hero.cs",
               "DocumentMoniker": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Characters\\Hero.cs",
               "RelativeDocumentMoniker": "Gladiator\\Characters\\Hero.cs",
               "ToolTip": "C:\\Users\\perni\\source\\repos\\Training\\Eksamen\\Gladiator\\Gladiator\\Characters\\Hero.cs",
               "RelativeToolTip": "Gladiator\\Characters\\Hero.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T09:46:11.204Z",
               "EditorCaption": ""

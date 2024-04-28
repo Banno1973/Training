@@ -79,7 +79,7 @@ public class Game
         while (_hero.IsAlive() && _currentOpponent.IsAlive())
         {
             Console.Clear(); // Clear console between each combat round
-            DisplayMatchStats(); // Display tabulated stats for the hero and opponent
+            DisplayMatchStats(); // Display stats for the hero and opponent
 
             // Display combat actions
             Console.WriteLine("\nAvailable Actions:");
