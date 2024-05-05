@@ -1,5 +1,5 @@
-﻿using Gladiator;
-using Gladiator.Characters;
+﻿using Gladiator.Characters;
+using Gladiator.Utilities;
 
 public class Game
 {
