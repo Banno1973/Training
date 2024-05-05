@@ -1,4 +1,4 @@
-﻿namespace Gladiator
+﻿namespace Gladiator.Utilities
 {
     public class Dice
     {

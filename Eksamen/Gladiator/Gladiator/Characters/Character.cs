@@ -1,6 +1,7 @@
 ﻿namespace Gladiator.Characters
 {
     using System;
+    using Gladiator.Utilities;
 
     public abstract class Character
     {
