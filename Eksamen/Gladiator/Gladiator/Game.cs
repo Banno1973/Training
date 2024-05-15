@@ -87,6 +87,7 @@ public class Game
             Console.WriteLine("1. Attack. Roll 1d20. If you hit, do 1d6 damage.");
             Console.WriteLine("2. Defend. Do nothing but regain 1d4 life.");
             Console.WriteLine("3. Reckless attack. Automatic hit, but lose 1d4 life.");
+            Console.WriteLine("4. Cheat. Autokill! :)");
             Console.WriteLine("Choose an action (enter the number): ");
 
             string action = Console.ReadLine();
@@ -102,8 +103,11 @@ public class Game
                 case "3":
                     _hero.RecklessAttack(_currentOpponent);
                     break;
+                case "4":
+                    _hero.Cheat(_currentOpponent);
+                    break;
                 default:
-                    Console.WriteLine("Invalid input, lost your turn!");
+                    Console.WriteLine("Invalid input, you lost your turn!");
                     break;
             }
 

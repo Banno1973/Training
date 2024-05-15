@@ -55,6 +55,12 @@
                 TakeDamage(selfDamage); 
             }
         }
+
+        public void Cheat(Character opponent) 
+        {
+            Console.WriteLine($"You cheat and do 100 damage!");
+            opponent.TakeDamage(100);
+        }
     }
 
 }
