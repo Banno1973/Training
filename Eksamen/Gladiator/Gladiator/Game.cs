@@ -16,7 +16,7 @@ public class Game
         Console.Write("Enter the name of your hero: ");
 
         string heroName = Console.ReadLine();
-        _hero = new Hero(heroName, 3, 10, 15, new Dice(1));  // Initialize hero stats
+        _hero = new Hero(heroName, 3, 10, 15, new Dice(6));  // Initialize hero stats
     }
 
     public void Start()
