@@ -43,12 +43,17 @@
             Dice selfDamageDie = new(4);
             int selfDamage = selfDamageDie.Roll();
             int opponentDamage = DamageDice.Roll();
-            
-            Console.WriteLine($"{Name} recklessly attacks {opponent.Name} and rolls 1d4 for {opponentDamage} damage, " +
-                                $"but loses {selfDamage} life points!\n");
 
             opponent.TakeDamage(opponentDamage);
-            TakeDamage(selfDamage);
+
+            Console.WriteLine($"{Name} recklessly attacks {opponent.Name} and rolls 1d6 for {opponentDamage} damage, " +
+                                $"but loses {selfDamage} life points!\n" +
+                                $"You reduced their life to {opponent.LifePoints}!\n");
+
+            if (opponent.IsAlive()) 
+            { 
+                TakeDamage(selfDamage); 
+            }
         }
     }
 

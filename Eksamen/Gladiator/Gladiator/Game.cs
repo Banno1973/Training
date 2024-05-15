@@ -11,11 +11,12 @@ public class Game
     public Game()
     {
         Console.WriteLine("Welcome to the Gladiator Arena!");
-        Console.WriteLine("Can you survive 5 rounds in the arena, or will you perish like so many before?\n");
+        Console.WriteLine("Can you survive 5 rounds in the arena, or will you perish like so many before?");
+        Console.WriteLine("Roll a 1d20 to hit. You hit if the roll is >= than your opponent's defense.\n");
         Console.Write("Enter the name of your hero: ");
 
         string heroName = Console.ReadLine();
-        _hero = new Hero(heroName, 3, 10, 15, new Dice(6));  // Initialize hero with initial stats
+        _hero = new Hero(heroName, 3, 10, 15, new Dice(1));  // Initialize hero stats
     }
 
     public void Start()
@@ -31,7 +32,7 @@ public class Game
 
             if (!ConductMatch())
             {
-                Console.WriteLine("You have been defeated. Press any key to restart the game...");
+                Console.WriteLine("You have been defeated. Press any key to exit the game...");
                 Console.ReadKey();
                 return;
             }
@@ -83,13 +84,14 @@ public class Game
 
             // Display combat actions
             Console.WriteLine("\nAvailable Actions:");
-            Console.WriteLine("1. Attack");
+            Console.WriteLine("1. Attack. Roll 1d20. If you hit, do 1d6 damage.");
             Console.WriteLine("2. Defend. Do nothing but regain 1d4 life.");
             Console.WriteLine("3. Reckless attack. Automatic hit, but lose 1d4 life.");
             Console.WriteLine("Choose an action (enter the number): ");
 
-            string input = Console.ReadLine();
-            switch (input)
+            string action = Console.ReadLine();
+
+            switch (action)
             {
                 case "1":
                     _hero.PerformAttack(_currentOpponent);
@@ -110,7 +112,7 @@ public class Game
                 _currentOpponent.PerformAttack(_hero);
                 if (!_hero.IsAlive())
                 {
-                    Console.WriteLine("You have been defeated in the arena.");
+                    Console.WriteLine($"The world goes black, as {_currentOpponent.Name} delivers a final blow.");
                     return false;  // Game ends
                 }
             }
