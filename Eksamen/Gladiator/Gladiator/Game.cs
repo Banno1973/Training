@@ -11,7 +11,7 @@ public class Game
     public Game()
     {
         Console.WriteLine("Welcome to the Gladiator Arena!");
-        Console.WriteLine("Can you survive 5 rounds in the arena, or will you perish like so many before?");
+        Console.WriteLine("Can you survive 5 matches in the arena, or will you perish like so many before?");
         Console.WriteLine("Roll a 1d20 to hit. You hit if the roll is >= than your opponent's defense.\n");
         Console.Write("Enter the name of your hero: ");
 
