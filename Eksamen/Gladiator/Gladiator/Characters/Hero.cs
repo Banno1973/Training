@@ -19,7 +19,8 @@
             {
                 int damage = DamageDice.Roll();
                 opponent.TakeDamage(damage);
-                Console.WriteLine($"{Name} attacks {opponent.Name} and rolls 1d{DamageDice.GetDieSides()} for {damage} damage! You reduced their life to {opponent.LifePoints}!\n");
+                Console.WriteLine($"{Name} attacks {opponent.Name} and rolls 1d{DamageDice.GetDieSides()} for {damage} damage! " +
+                                    $"You reduced their life to {opponent.LifePoints}!\n");
             }
             else
             {
@@ -32,8 +33,22 @@
             Dice healingDie = new (4);
             int lifePointsGained = healingDie.Roll();
 
-            Console.WriteLine($"You fend off your opponent to catch your breath. You roll a 1d4 and regain {lifePointsGained} life points.");
+            Console.WriteLine($"You fend off your opponent to catch your breath. You roll a 1d4 and regain {lifePointsGained} life points.\n");
+            
             RegainLifePoints(lifePointsGained);
+        }
+
+        public void RecklessAttack(Character opponent)
+        {
+            Dice selfDamageDie = new(4);
+            int selfDamage = selfDamageDie.Roll();
+            int opponentDamage = DamageDice.Roll();
+            
+            Console.WriteLine($"{Name} recklessly attacks {opponent.Name} and rolls 1d4 for {opponentDamage} damage, " +
+                                $"but loses {selfDamage} life points!\n");
+
+            opponent.TakeDamage(opponentDamage);
+            TakeDamage(selfDamage);
         }
     }
 

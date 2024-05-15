@@ -16,7 +16,7 @@
             return _sides;
         }
 
-        // Roll a single die numberOfDice times and sum the results
+        // Roll a die numberOfDice times and sum the results - roll 1 die as default
         public int Roll(int numberOfDice = 1)
         {
             int total = 0;

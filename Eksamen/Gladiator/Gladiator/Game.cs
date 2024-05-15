@@ -85,6 +85,7 @@ public class Game
             Console.WriteLine("\nAvailable Actions:");
             Console.WriteLine("1. Attack");
             Console.WriteLine("2. Defend. Do nothing but regain 1d4 life.");
+            Console.WriteLine("3. Reckless attack. Automatic hit, but lose 1d4 life.");
             Console.WriteLine("Choose an action (enter the number): ");
 
             string input = Console.ReadLine();
@@ -95,6 +96,9 @@ public class Game
                     break;
                 case "2":
                     _hero.Defend();
+                    break;
+                case "3":
+                    _hero.RecklessAttack(_currentOpponent);
                     break;
                 default:
                     Console.WriteLine("Invalid input, lost your turn!");
