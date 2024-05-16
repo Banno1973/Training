@@ -5,6 +5,7 @@
 
     public abstract class Character
     {
+        private int _currentLifePoints;
         public string Name { get; private set; }
         public int Attack { get; set; }
         public int Defense { get; set; }
@@ -16,8 +17,7 @@
             // Make sure life points only is set between 0 and MaxLifePoints
             private set { _currentLifePoints = Math.Max(0, Math.Min(value, MaxLifePoints)); }
         }
-        private int _currentLifePoints;
-
+      
         // Shared d20 for all attack rolls, protected so derived classes can access it
         protected static Dice attackDice = new(20);
 

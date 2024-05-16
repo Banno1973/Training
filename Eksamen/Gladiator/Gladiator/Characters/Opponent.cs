@@ -28,7 +28,8 @@
                 }
 
                 hero.TakeDamage(totalDamage);
-                Console.WriteLine($"{Name} attacks {hero.Name} and rolls 1d{DamageDice.GetDieSides()} for {totalDamage} damage. They reduced your life to {hero.LifePoints}!\n");
+                Console.WriteLine($"{Name} attacks {hero.Name} and rolls 1d{DamageDice.GetDieSides()} for {totalDamage} damage. " +
+                                    $"They reduced your life to {hero.LifePoints}!\n");
             }
             else
             {
