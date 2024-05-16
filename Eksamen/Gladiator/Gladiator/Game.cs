@@ -6,7 +6,7 @@ public class Game
     private Hero _hero;
     private Opponent _currentOpponent;
     private int _currentMatch = 0;
-    private const int TotalMatches = 5;  // Total number of matches
+    private const int TotalMatches = 5;  
 
     public Game()
     {
